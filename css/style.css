@@ -1,0 +1,399 @@
+@charset "utf-8";
+html,body {
+    width: 100%;
+    height: 100%;
+}
+i {
+    font-style: normal;
+}
+.flex {
+    display: flex;
+    display: -webkit-flex;
+}
+.flex.flex-column {
+    flex-direction: column;
+}
+.flex.justify-center {
+    justify-content: center;
+}
+.flex.justify-between {
+    justify-content: space-between;
+}
+.flex.justify-end {
+    justify-content: flex-end;
+}
+.flex.align-center {
+    align-items: center;
+}
+.flex.align-end {
+    align-items: flex-end;
+}
+
+/*头图样式*/
+.view-wrapper {
+    position: relative;
+    height: 12.03rem;
+    width: 100%;
+    background: url("../images/bg_02.png") no-repeat center;
+    background-size: 100%;
+}
+.rule-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 0.15rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.btn_box {
+    position: absolute;
+    top: 10.43rem;
+    width: 6.55rem;
+    left: 50%;
+    margin-left: -3.275rem;
+}
+.btn_box .btn {
+    width: 2.99rem;
+    height: 1.06rem;
+    line-height: 1.06rem;
+    background: url("../images/button_01.png") no-repeat center;
+    font-size: 0.35rem;
+    color: #fefefe;
+    text-align: center;
+    background-size: 100%;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.flex-box.flex-box {
+    height: 100%;
+}
+.modal-content {
+    position: relative;
+    width: 6.3rem;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.modal-title {
+    height: 0.82rem;
+    line-height: 0.82rem;
+    color: #ffffff;
+    font-size: 0.35rem;
+    text-align: center;
+    background-color: #e93227;
+    border-radius: 8px 8px 0 0;
+}
+.modal-body .rule-text {
+    width: 5.6rem;
+    height: 6.8rem;
+    margin: 0.5rem auto;
+    overflow-y: scroll;
+    font-size: 0.26rem;
+    color: #333333;
+    line-height: 2em;
+}
+.modal-close {
+    position: absolute;
+    top: -0.8rem;
+    right: 0;
+    width: 0.4rem;
+    height: 0.8rem;
+    background: url("../images/modal-close.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.modal-body .tip-text {
+    font-size: 0.3rem;
+    color: #333333;
+    line-height: 1.8em;
+}
+.modal.modal-tip .modal-content{
+    width: 5.6rem;
+}
+.modal.modal-tip .modal-title {
+    letter-spacing: 5px;
+}
+.modal.modal-tip .modal-enter {
+    width: 3.07rem;
+    height: 0.9rem;
+    margin: 0.5rem auto 0;
+    line-height: 0.9rem;
+    font-size: 0.37rem;
+    color: #fefefe;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #e93227;
+    border-radius: 0.45rem;
+}
+.modal_02-content {
+    width: 5.16rem;
+    height: 6.14rem;
+    padding-top: 1rem;
+    background: url("../images/modal_content_02.png") no-repeat center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+.modal_02-content .modal-enter {
+    width: 3.07rem;
+    height: 0.9rem;
+    margin: 0.7rem auto 0;
+    line-height: 0.9rem;
+    font-size: 0.37rem;
+    color: #fefefe;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #e93227;
+    border-radius: 0.45rem;
+}
+.modal_03-content {
+    width: 5.7rem;
+    height: 7.1rem;
+    padding-top: 1.44rem;
+    background: url("../images/modal_content_03.png") no-repeat center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+.modal_03-content .modal-enter {
+    width: 3.07rem;
+    height: 0.9rem;
+    margin: 0.7rem auto 0;
+    line-height: 0.9rem;
+    font-size: 0.37rem;
+    color: #e93227;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #ffe700;
+    border-radius: 0.45rem;
+}
+.modal_04-content {
+    width: 5.16rem;
+    height: 6.14rem;
+    background: url("../images/text_bg.png") no-repeat center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+
+}
+.modal_04-content .title {
+    font-size: 0.35rem;
+    color: #e93227;
+    text-align: center;
+}
+.modal_04-content-body {
+    padding-top: 0.75rem;
+    width: 4.26rem;
+}
+.modal_04-content-body .input-area {
+    display: block;
+    width: 4rem;
+    height: 2rem;
+    margin: 0.13rem auto 0;
+    font-size: 0.29rem;
+    color: #666666;
+    resize: none;
+    background-color: transparent;
+    font-family: "Microsoft YaHei";
+    box-sizing: border-box;
+    line-height: 0.55rem;
+    border: none;
+    overflow: hidden;
+}
+.modal_04-content-body .tip-text {
+    margin-top: 0.88rem;
+    color: #999999;
+    font-size: 0.27rem;
+}
+.modal_04-content-body .sub-btn {
+    width: 3.07rem;
+    height: 0.9rem;
+    margin: 0.2rem auto 0;
+    line-height: 0.9rem;
+    font-size: 0.37rem;
+    color: #fefefe;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #e93227;
+    border-radius: 0.45rem;
+}
+.gift_01 {
+    position: absolute;
+    top: 4.52rem;
+    right: 1.52rem;
+    width: 1.06rem;
+    height: 1.37rem;
+    z-index: 20;
+}
+.gift_btn_01 {
+    position: absolute;
+    top: 4.52rem;
+    right: 1.52rem;
+    width: 1.06rem;
+    height: 1.37rem;
+    z-index: 40;
+}
+.gift_02 {
+    position: absolute;
+    top: 6.28rem;
+    right: 0.36rem;
+    width: 1.76rem;
+    height: 1.44rem;
+    z-index: 20;
+}
+.gift_btn_02 {
+    position: absolute;
+    top: 6.28rem;
+    right: 0.36rem;
+    width: 1.76rem;
+    height: 1.44rem;
+    z-index: 40;
+}
+.gift_03 {
+    position: absolute;
+    top: 7.98rem;
+    right: 2.22rem;
+    width: 1.86rem;
+    height: 1.99rem;
+    z-index: 20;
+}
+.gift_btn_03 {
+    position: absolute;
+    top: 7.98rem;
+    right: 2.5rem;
+    width: 1.2rem;
+    height: 1.99rem;
+    z-index: 40;
+}
+.gift_04 {
+    position: absolute;
+    top: 8.18rem;
+    right: 0.47rem;
+    width: 2.18rem;
+    height: 2.21rem;
+    z-index: 20;
+}
+.gift_btn_04 {
+    position: absolute;
+    top: 8.18rem;
+    right: 0.7rem;
+    width: 1.5rem;
+    height: 2.21rem;
+    z-index: 40;
+}
+.snow_01 {
+    position: absolute;
+    top: 4.8rem;
+    right: 0.14rem;
+    width: 2.92rem;
+    height: 1.21rem;
+    z-index: 30;
+    background: url("../images/snow_01.png") no-repeat top left;
+    background-size: 100% 100%;
+}
+.snow_02 {
+    position: absolute;
+    top: 6.29rem;
+    right: 0;
+    width: 3.61rem;
+    height: 1.83rem;
+    z-index: 30;
+    background: url("../images/snow_02.png") no-repeat top left;
+    background-size: 100% 100%;
+}
+.snow_03 {
+    position: absolute;
+    top: 8.51rem;
+    right: 0;
+    width: 4.36rem;
+    height: 1.91rem;
+    z-index: 30;
+    background: url("../images/snow_03.png") no-repeat top left;
+    background-size: 100% 100%;
+}
+.wazi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.19rem;
+    height: 2.02rem;
+    background: url("../images/wazi.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 20;
+}
+.hua {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 7.5rem;
+    height: 1.61rem;
+    background: url("../images/hua.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 20;
+}
+.prize-list {
+    width: 6.7rem;
+    height: 9.83rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 0.4rem;
+}
+.prize-list ul {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.prize-list ul li {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.3rem;
+    width: 5.87rem;
+    height: 1.51rem;
+    margin: 0 auto 0.12rem;
+    background: url("../images/prize_bg_01.png") no-repeat center;
+    background-size: 100%;
+    box-sizing: border-box;
+}
+.prize-list ul li .q-title {
+    font-size: 0.24rem;
+    color: #fefffe;
+}
+.prize-list ul li .sm {
+    font-size: 0.2rem;
+    color: #ac412f;
+    margin-top: 0.27rem;
+}
+.prize-list .prize-v {
+    font-size: 0.3rem;
+    color: #fefffe;
+}
+.prize-list .prize-v span {
+    font-size: 0.5rem;
+}
+.prize-list ul li:nth-child(even) {
+    background-image: url("../images/prize_bg_02.png");
+}
+.prize-list ul li:nth-child(even) .sm {
+    color: #524eb4;
+}
+.return-btn {
+    display: block;
+    margin: 0.3rem 0.4rem;
+    font-size: 0.3rem;
+    color: #fefefe;
+}

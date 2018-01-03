@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="full-screen" content="yes">
+        <meta name="x5-fullscreen" content="true">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="email=no" />
+
+        <title>圣诞寄语</title>
+        <script type="text/javascript">
+                (function (global) {
+                    function remChange() {
+                        document.documentElement.style.fontSize = 100 * document.documentElement.clientWidth / 750 + 'px';
+                    }
+                    remChange();
+                    global.addEventListener('resize', remChange, false);
+                })(window);
+        </script>
+        <link rel="stylesheet" href="css/reset.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="view-wrapper">
+            <div class="rule-btn"></div>
+            <div class="btn_box flex justify-between">
+                <div class="btn" ontouchend="window.location.href='index_02.html'">
+                    我的礼包
+                </div>
+                <div class="btn write-btn">
+                    我要写寄语
+                </div>
+            </div>
+            <img class="gift_01" src="images/gift_01.gif" />
+            <img class="gift_02" src="images/gift_02.gif" />
+            <img class="gift_03" src="images/gift_03.gif" />
+            <img class="gift_04" src="images/gift_04.gif" />
+            <div class="gift_btn gift_btn_01"></div>
+            <div class="gift_btn gift_btn_02"></div>
+            <div class="gift_btn gift_btn_03"></div>
+            <div class="gift_btn gift_btn_04"></div>
+            <div class="snow_01"></div>
+            <div class="snow_02"></div>
+            <div class="snow_03"></div>
+        </div>
+        <div class="mask" style="display: none;"></div>
+
+        <!-- 规则弹窗 -->
+        <div id="modalRule" class="modal" style="display: none;">
+            <div class="flex justify-center align-center flex-box">
+                <div class="modal-content">
+                    <div class="modal-title">
+                        活动规则
+                    </div>
+                    <div class="modal-body">
+                        <p class="rule-text">
+                            <span style="font-weight: 700;">说明：</span><br />
+                            1、活动奖励在中奖后五个工作日内充值到注册手机号中，可通过公众号点击菜单 “轻松查-更多服务-套餐余量”查询；<br />
+                            2、京东电子卡有限期为自激活日期起36个月，京东卡不记名、不挂失、不计息、不兑换、不可修改密码，请妥善保管账号及密码。<br />
+                            3、本地流量包奖品，赠送后当月未使用完可结转至下月，次月未使用完失效，主副卡不共享；<br />
+                            4、易通卡、易通9分卡、大三元等OCS套餐、流量时长型计费及不限量套餐的用户无法获得活动奖项中的流量奖项；<br />
+                            5、仅限天津电信用户参与，请保证号码状态正常在用<br />
+                            6、易通卡、易通9分卡、大三元等OCS套餐、流量时长型计费及不限量套餐的用户无法获得活动奖项中的流量奖项；
+                        </p>
+                    </div>
+                    <div class="modal-close"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 提示弹窗 -->
+        <div class="modal modal-tip" style="display: none;">
+            <div class="flex justify-center align-center flex-box">
+                <div class="modal-content">
+                    <div class="modal-title">
+                        提示
+                    </div>
+                    <div class="modal-body" style="padding: 0.5rem;">
+                        <p class="tip-text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                        </p>
+                        <div class="modal-enter">确定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 未中奖弹窗 -->
+        <div class="modal" style="display: none;">
+            <div class="flex justify-center align-center flex-box">
+                <div class="modal_02-content flex align-center flex-column justify-center">
+                    <p style="font-size: 0.4rem;color: #e93227;">很抱歉！</p>
+                    <p style="font-size: 0.29rem;color: #333333;line-height: 1.6em;margin-top: 0.4rem;text-align: center;">您本次未能抽中奖品<br />明天再来拆礼物吧</p>
+                    <div class="modal-enter">
+                        确定
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中奖弹窗 -->
+        <div id="modalPrize" class="modal" style="display: none;">
+            <div class="flex justify-center align-center flex-box">
+                <div class="modal_03-content flex align-center flex-column justify-center">
+                    <p style="font-size: 0.4rem;color: #fdd000;">恭喜您！</p>
+                    <p style="font-size: 0.29rem;color: #ffffff;line-height: 1.6em;margin-top: 0.4rem;text-align: center;">恭喜您获得电a信话费20元<br />快去我的礼包查看吧</p>
+                    <div class="modal-enter">
+                        确定
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 寄语弹窗 -->
+        <div class="modal" style="display: none;" id="modalTextarea">
+            <div class="flex justify-center align-center flex-box">
+                <div class="modal_04-content flex align-center flex-column">
+                    <div class="modal_04-content-body">
+                        <div class="title">你想对TA说</div>
+                        <textarea class="input-area" placeholder="点击此处输入祝福语！" onKeyUp="if(this.value.length > 50) this.value=this.value.substr(0,50)"></textarea>
+                        <div class="tip-text">* 提示：字数仅限50字以内</div>
+                        <div class="sub-btn">
+                            提 交
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
